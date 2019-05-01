@@ -20,7 +20,7 @@ See http://www.picotech.com/support/topic12969.html
 from __future__ import division
 
 import time
-from picoscope import ps6000
+from picoscope import ps5000a
 import pylab as plt
 import numpy as np
 
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     print("Attempting to open Picoscope 6000...")
 
     # see page 13 of the manual to understand how to work this beast
-    ps = ps6000.PS6000()
+    ps = ps5000a.PS5000a()
 
     print(ps.getAllUnitInfo())
 
@@ -73,7 +73,7 @@ if __name__ == "__main__":
     plt.ion()
 
     plt.figure()
-    plt.hold(True)
+    # plt.hold(True)
     plt.plot(dataTimeAxis, dataA, label="Waveform")
     plt.grid(True, which='major')
     plt.title("Picoscope 6000 waveforms")
@@ -81,3 +81,4 @@ if __name__ == "__main__":
     plt.xlabel("Time (ms)")
     plt.legend()
     plt.draw()
+    plt.show()

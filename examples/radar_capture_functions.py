@@ -146,11 +146,10 @@ class RadarScope(object):
 if __name__ == '__main__':
     import matplotlib.pyplot as plt
     # picoscope = reload(picoscope)
-    from picoscope import ps3000a
+    from picoscope import ps5000a
     # ps3000a = reload(ps3000a)
 
-    SERIAL_NUM = 'AR911/011\x00'
-    ps = ps3000a.PS3000a(SERIAL_NUM)
+    ps = ps5000a.PS5000a()
 
     rscope = RadarScope(ps, max_range=1e3, range_resolution=5)
 
