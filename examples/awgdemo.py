@@ -82,7 +82,7 @@ if __name__ == "__main__":
 
     plt.ion()
     plt.figure()
-    plt.hold(True)
+    # plt.hold(True)
     plt.plot(dataTimeAxis, dataA, label="Clock")
     plt.grid(True, which='major')
     plt.title("Picoscope 6000 waveforms")
