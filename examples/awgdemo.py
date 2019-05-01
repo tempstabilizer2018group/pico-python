@@ -19,7 +19,7 @@ from __future__ import print_function
 from __future__ import unicode_literals
 
 import time
-from picoscope import ps6000
+from picoscope import ps5000a
 import pylab as plt
 import numpy as np
 
@@ -29,7 +29,7 @@ if __name__ == "__main__":
     print("Attempting to open Picoscope 6000...")
 
     # see page 13 of the manual to understand how to work this beast
-    ps = ps6000.PS6000()
+    ps = ps5000a.PS5000a()
 
     print("Found the following picoscope:")
     print(ps.getAllUnitInfo())
